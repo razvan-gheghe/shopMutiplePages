@@ -1,0 +1,74 @@
+{
+    "_version": "1.12.0",
+    "sap.app": {
+        "id": "myApp",
+        "type": "application",
+        "i18n": "i18n/i18n.properties",
+        "applicationVersion": {
+            "version": "1.0.0"
+        },
+        "title": "Proiect UI5"
+    },
+    "sap.ui": {
+        "technology": "UI5",
+        "deviceTypes": {
+            "desktop": true,
+            "tablet": true,
+            "phone": true
+        }
+    },
+    "sap.ui5": {
+        "rootView": {
+            "viewName": "myApp.view.View1",
+            "type": "XML",
+            "async": true,
+            "id": "app"
+        },
+        "routing": {
+            "config": {
+                "routerClass": "sap.m.routing.Router",
+                "viewType": "XML",
+                "viewPath": "myApp.view",
+                "controlId": "app",
+                "controlAggregation": "pages",
+                "async": true
+            },
+            "routes": [
+                {
+                    "pattern": "",
+                    "name": "View1",
+                    "target": "View1"
+                },
+                {
+                    "pattern": "view2",
+                    "name": "View2",
+                    "target": "View2"
+                },
+                {
+                    "pattern": "view3",
+                    "name": "View3",
+                    "target": "View3"
+                },
+                {
+                    "pattern": "view4",
+                    "name": "View4",
+                    "target": "View4"
+                }
+            ],
+            "targets": {
+                "View1": {
+                    "viewName": "View1"
+                },
+                "View2": {
+                    "viewName": "View2"
+                },
+                "View3": {
+                    "viewName": "View3"
+                },
+                "View4": {
+                    "viewName": "View4"
+                }
+            }
+        }
+    }
+}

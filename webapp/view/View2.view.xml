@@ -1,0 +1,57 @@
+<mvc:View
+    controllerName="myApp.controller.View2"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m">
+    
+    <App>
+        <Page title="View 2">
+         <Button text="Back to Main" press="onNavigateToView1" />
+            <content>             
+            <VBox class="sapUiLargeMargin" alignItems="Center">
+                
+                
+                <VBox class="sapUiMediumMargin">
+                    <!-- Titlul principal -->
+                    <Title text="Magazinul de la Solca" level="H1" titleStyle="H1" class="sapUiLargeMarginTop sapUiMediumMarginBottom"/>
+                    
+                    <!-- Secțiunea de descriere -->
+                    <Text text="Bine ați venit la magazinul nostru din Solca, un loc special amplasat în inima pădurilor din Bucovina. Magazinul nostru oferă produse locale, proaspete și tradiționale, încurajând comunitatea să susțină micii producători din zonă. Fiecare produs este ales cu grijă pentru a aduce pe masa clienților noștri calitate și autenticitate." 
+                        class="sapUiSmallMargin" />
+                </VBox>
+                    <!-- Secțiunea cu descrierea echipei și magazinului -->
+                    <VBox class="sapUiMediumMargin">
+                        <Text text="Istoria magazinului" class="sapUiSmallMarginBottom sapUiMediumMarginTop" />
+                        <Text text="Magazinul a fost fondat în anul 1994 de părinții mei, într-o perioadă în care produsele locale începeau să fie tot mai apreciate. Fiind situat într-o zonă rurală, magazinul nostru este un punct de referință pentru toți locuitorii din Solca, dar și pentru turiștii care vin să exploreze frumusețea pădurilor din împrejurimi." />
+                    </VBox>
+                
+                <!-- Separator -->
+                <Toolbar class="sapUiMediumMarginTop">
+                    <ToolbarSpacer />
+                    <Label text="Produsele Noastre" />
+                    <ToolbarSpacer />
+                </Toolbar>
+                
+                <!-- Secțiunea cu produse prezentate -->
+                <VBox class="sapUiMediumMargin" alignItems="Center">
+                    <Text text="Produsele noastre sunt alese cu grijă și provin de la producători locali. Printre cele mai apreciate se numără:" class="sapUiSmallMarginBottom" />
+                    
+                    <List id="produseList" items="{/produse}">
+                        <CustomListItem>
+                            <HBox alignItems="Center" justifyContent="SpaceBetween">
+                                <VBox>
+                                    <Text text="{nume}" class="sapUiSmallMarginBottom" />
+                                    <Text text="Cantitate: {cantitate}" />
+                                </VBox>
+                                <Button text="Detalii" type="Transparent" press="onDetailsPress" />
+                            </HBox>
+                        </CustomListItem>
+                    </List>
+                </VBox>
+                <!-- Buton de contact -->
+                <Button text="Sunati-ne" type="Emphasized" press="onContactPress" class="sapUiLargeMarginTop" />
+            </VBox>
+            <Image src="./images/path_to_forest_image.jpg" densityAware="false" class="customImage" alt="Solca, pădure" />
+            </content>
+        </Page>
+    </App>
+</mvc:View>

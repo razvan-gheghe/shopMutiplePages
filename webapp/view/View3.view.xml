@@ -1,0 +1,84 @@
+<mvc:View
+    controllerName="myApp.controller.View3"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    xmlns:f="sap.f">
+    
+    <Page title="View 3" class="sapUiContentPadding backgroundPage">
+        <content>
+            <VBox>
+                <!-- Butoane de navigare -->
+                <Button text="Back to Main" press="onNavigateToView1" />
+                <Button text="Go to View 2" press="onNavigateToView2" />
+                
+                <!-- Card cu descrierea ta -->
+                <Panel headerText="Despre mine" class="sapUiSmallMarginBottom">
+                    <VBox>
+                        <Text text="Salut! Sunt un dezvoltator ABAP lipsit de pasiune. Am o experiența. Vad ca fac Ui5 acum.  In timpul liber, beau alcool in beci la soare. 
+                        Sau oricum, departe de soare. Sau stau in costumul meu de cosmonaut. 
+                        Hobbyurile mele este Guiness-ul rece si inotul."
+                              class="sapUiSmallMarginBottom" />
+                    </VBox>
+                </Panel>
+
+                <f:GridContainer>
+    <!-- GenericTile pentru locuri în care am trăit -->
+    <GenericTile header="Locuri în care am trăit" press="onTileTraitPress">
+        <layoutData>
+            <f:GridContainerItemLayoutData rows="2" columns="2"/>
+        </layoutData>
+        <TileContent>
+            <ImageContent src="./images/path_to_image_loc_trait_1.jpg" />
+        </TileContent>
+    </GenericTile>
+
+    <!-- GenericTile pentru locuri pe care le-am vizitat -->
+    <GenericTile header="Locuri pe care le-am vizitat" press="onTileVizitatPress">
+        <layoutData>
+            <f:GridContainerItemLayoutData rows="2" columns="2"/>
+        </layoutData>
+        <TileContent>
+            <ImageContent src="./images/path_to_image_loc_vizitat_1.jpg" />
+        </TileContent>
+    </GenericTile>
+    <GenericTile header="My work" press="onWorkPress">
+        <layoutData>
+            <f:GridContainerItemLayoutData rows="2" columns="2"/>
+        </layoutData>
+        <TileContent>
+            <ImageContent src="./images/abapboy.jpg" />
+        </TileContent>
+    </GenericTile>
+</f:GridContainer>
+
+                  <Panel headerText="Contactează-mă pentru ca vreau sa-mi platesc apartamentul odata" class="sapUiSmallMarginBottom">
+                    <VBox>
+                        <HBox class="sapUiSmallMarginBottom">
+                            <Label text="LinkedIn: " />
+                            <Link text="linkedin.com/in/numele-tau" href="https://www.linkedin.com/in/razvan-gheghe/" target="_blank" />
+                        </HBox>
+                        <HBox class="sapUiSmallMarginBottom">
+                            <Label text="Telefon: " />
+                            <Text text="+40 745 514 223" />
+                        </HBox>
+                        <HBox class="sapUiSmallMarginBottom">
+                            <Label text="E-mail: " />
+                            <Link text="razvan.gheghe@gmail.com" href="mailto:razvan.gheghe@gmail.com" />
+                        </HBox>
+                    </VBox>
+                </Panel>
+                 
+                <!-- Carousel cu fotografii -->
+                <Carousel height="300px" loop="true" activePage="0">
+                    <pages>
+                        <Image src="images/photo1.jpg" alt="Photo 1" />
+                        <Image src="images/photo2.jpg" alt="Photo 2" />
+                        <Image src="images/photo3.jpg" alt="Photo 3" />
+                    </pages>
+                </Carousel>
+            </VBox>
+        </content>
+    </Page>
+</mvc:View>
+
+            

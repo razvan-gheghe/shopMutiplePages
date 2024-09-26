@@ -1,0 +1,32 @@
+<mvc:View
+    controllerName="myApp.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+>
+    <App id="app">
+        <Page title="View 1">
+            <content>
+                <HBox>
+                    <Button
+                        text="About the shop"
+                        press="onNavigateToView2"
+                    />
+                    <Button
+                        text="About me"
+                        press="onNavigateToView3"
+                    />
+                </HBox>
+                <VBox
+                    justifyContent="Center"
+                    alignItems="Center"
+                >
+                    <Title text="Bine ați venit la Magazinul Mixt" />
+                    <Button
+                        text="Produse in stoc"
+                        press="onNavigateToView4"
+                    />
+                </VBox>
+            </content>
+        </Page>
+    </App>
+</mvc:View>
